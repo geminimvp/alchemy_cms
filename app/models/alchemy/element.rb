@@ -77,9 +77,14 @@ module Alchemy
       required: false,
       touch: true
 
-    has_and_belongs_to_many :touchable_pages, -> { uniq },
-      class_name: 'Alchemy::Page',
-      join_table: ElementToPage.table_name
+    # has_and_belongs_to_many :touchable_pages, -> { uniq },
+    #   class_name: 'Alchemy::Page',
+    #   join_table: ElementToPage.table_name
+
+    has_many :element_to_pages, dependent: :destroy
+    has_many :touchable_pages, -> { uniq },
+             through: :element_to_pages,
+             source: :page
 
     validates_presence_of :name, on: :create
     validates_format_of :name, on: :create, with: /\A[a-z0-9_-]+\z/

@@ -17,9 +17,15 @@ module Alchemy
         through: :descendent_elements,
         class_name: 'Alchemy::Content',
         source: :contents
-      has_and_belongs_to_many :to_be_swept_elements, -> { uniq },
-        class_name: 'Alchemy::Element',
-        join_table: ElementToPage.table_name
+
+      # has_and_belongs_to_many :to_be_swept_elements, -> { uniq },
+      #   class_name: 'Alchemy::Element',
+      #   join_table: ElementToPage.table_name
+
+      has_many :element_to_pages, dependent: :destroy
+      has_many :to_be_swept_elements, -> { uniq },
+               through: :element_to_pages,
+               source: :element
 
       after_create :autogenerate_elements, unless: -> { systempage? || do_not_autogenerate }
       after_update :trash_not_allowed_elements!, if: :page_layout_changed?
