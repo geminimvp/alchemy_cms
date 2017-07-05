@@ -11,7 +11,7 @@
     <%- if can?(:configure, layoutpage) -%>
       <div class="button_with_label sitemap_tool">
         <%= link_to_dialog(
-          render_icon('configure_page'),
+          render_icon('configure-page'),
           alchemy.edit_admin_layoutpage_path(layoutpage),
           {
             title: Alchemy.t(:edit_page_properties),

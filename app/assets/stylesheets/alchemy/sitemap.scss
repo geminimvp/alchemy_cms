@@ -129,7 +129,7 @@
     }
   }
 
-  .icon.blank {
+  .icon-blank {
     margin-left: 2px;
     float: left;
     margin-top: 3px;
@@ -163,8 +163,8 @@ ul#sitemap {
     left: -23px;
     top: 8px;
 
-    &.collapsed { @extend .icon.expand.small }
-    &.folded { @extend .icon.collapse.small }
+    &.collapsed { @extend .icon-expand.small }
+    &.folded { @extend .icon-collapse.small }
   }
 
   ul {
@@ -268,7 +268,7 @@ ul.list .sitemap_sitename {
     background-position: -32px -40px;
   }
 
-  .page.icon.not-allowed {
+  .page.icon-not-allowed {
     &:after {
       content: '';
       position: absolute;

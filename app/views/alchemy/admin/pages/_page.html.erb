@@ -59,7 +59,7 @@
         {{#if permissions.configure}}
         <div class="button_with_label sitemap_tool">
           <%= link_to_dialog(
-            render_icon(:configure_page),
+            render_icon('configure-page'),
             alchemy.configure_admin_page_path(page),
             {
               title: Alchemy.t(:edit_page_properties),
@@ -69,7 +69,7 @@
           <label class="center"><%= Alchemy.t(:edit_page_properties) %></label>
         {{else}}
         <div class="sitemap_tool disabled with-hint">
-          <%= render_icon(:configure_page) %>
+          <%= render_icon('configure-page') %>
           <span class="hint-bubble">
             <%= Alchemy.t('Your user role does not allow you to edit this page') %>
           </span>

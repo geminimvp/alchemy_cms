@@ -66,7 +66,7 @@ $image-overlay-transition-easing: ease-in;
   cursor: pointer;
   @include transition(right $image-overlay-transition-duration $image-overlay-transition-easing);
 
-  .icon.close.small {
+  .icon-close.small {
     font-size: 32px;
     color: $medium-gray;
     text-shadow: 0 0 $default-padding $text-color;

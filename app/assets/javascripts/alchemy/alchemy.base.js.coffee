@@ -56,7 +56,7 @@ $.extend Alchemy,
           image.fadeIn 400
         image.on 'error', ->
           spinner.stop()
-          $parent.html('<span class="icon warn"/>')
+          $parent.html('<span class="icon-warning"/>')
 
   # Removes the picture from essence picture thumbnail
   removePicture: (selector) ->

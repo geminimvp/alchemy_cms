@@ -23,7 +23,7 @@ group :development, :test do
     gem 'bumpy'
     gem 'yard'
     gem 'redcarpet'
-    gem 'pry-byebug'
+    # gem 'pry-byebug'
     gem 'spring'
     gem 'spring-commands-rspec'
     gem 'rubocop', require: false
